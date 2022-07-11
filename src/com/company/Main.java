@@ -12,7 +12,33 @@ public class Main {
 
     }
 
+    public static void Movement() {
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter the row and column of the piece you want to move");
+        int row=input.nextInt();
+        int column=input.nextInt();
+        System.out.println("Enter the row and column of the place you want to move to");
+        int row2=input.nextInt();
+        int column2=input.nextInt();
 
+        if (chessBoard[row][column]=="P") {
+            if (row2 == row + 1 && column2 == column) {
+                ChessBoard[row2][column2] == "P"
+                if ((row + column) % 2 == 0) {
+                    chessBoard[row][column] = "x";
+                } else {
+                    chessBoard[row][column] = "*";
+                }
+            } else {
+                System.out.println("Invalid move");
+                Movement();
+            }
+        }
+
+
+
+
+    }
     public static void Chessboardprint (){
         String[][] chessBoard = new String[8][8];
 
